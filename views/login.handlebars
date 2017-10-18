@@ -1,0 +1,60 @@
+<link href="https://fonts.googleapis.com/css?family=Lato|Poiret+One|Raleway|Roboto" rel="stylesheet">
+<html>
+<head>
+	<title>Login</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+	 <link href="/css/hcilist.css" rel="stylesheet">
+	 <link href="/css/bootstrap-theme.css" rel="stylesheet">
+	 <link href="/css/bootstrap.css" rel="stylesheet">
+</head>
+
+<body id = "bg2">
+	<!-- background="https://s-media-cache-ak0.pinimg.com/564x/8a/c5/f3/8ac5f3ea403e5eaab530a41ab35b832c.jpg" -->
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1266173776791798',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+		<div class="top-container">
+		<h2 class="mehtext">Welcome to</h2>
+		<h2 class="evoke"><b>evoke</b></h2>
+		<p class="mehtext"id="kname"></p>
+		<h3 id="logs3" class="mediumtext">Login</h3>
+	  <div id="userName" class="login">
+			<form id="addUser" method= "get" action="/login">
+
+	    <h6 id = "logs" class="smallertext">Username: <input type="text" id="user" placeholder="type" name="person" required/></h6>
+	    <h6 id = "logs2" class="smallertext">Password: <input type="text" class="login-info" id="user" placeholder="type" name="type"/></h6>
+			</form>
+		</div>
+	    <a href="/list"> <button class="submit">Submit</button></a>
+			<!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+			-->
+			<p class="facebookLogin">
+				<!--<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+				</fb:login-button>-->
+		</p>
+
+	</div>
+	{{> facebook}}
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/facebook.js"></script>
+	{{> ga}}
+</body>
+</html>

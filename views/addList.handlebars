@@ -1,0 +1,94 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+
+    <title>Add Question</title>
+		<link href="/css/hcilist.css" rel="stylesheet">
+		<link href="/css/bootstrap-theme.css" rel="stylesheet">
+		<link href="/css/bootstrap.css" rel="stylesheet">
+</head>
+<body id = "bg1">
+	{{> navbar}}
+
+    <div class="top-container">
+			<h3 class="mehtext">Create your own idea</h3>
+					<p class="smallertext">
+				    If you have an idea for a question you would like to reflect on, type it in the box below and we'll review it and add it to our database</p>
+
+     <form id="addList" role="form" method="get" action="/addedList">
+			<textarea id="addListInput" name="name" cols="40" rows="5" placeholder="Example: List 3 things you would like to accomplish today." class="listItem"></textarea>
+			<br />
+		</form>
+     	<button id="sButton" class="submit">Submit</button>
+
+		{{#each data.items}}
+		<h4>{{before}}</h4>
+		<h4>{{title}}</h4>
+			<h4>{{after}}</h4>
+		{{/each}}
+
+
+ <h3 class="todaylist">Questions already in our database:</h3>
+ <div id= "inputList" class= "todayL">
+ {{#each questions}}
+   <p>{{prompt}}</p>
+  {{/each}}
+ </div>
+ <br>
+</div>
+ <nav class="navbar navbar-default navbar-fixed-bottom" id="nav-bottom">
+   <div class="container-fluid">
+     <div class="navbar-header">
+
+       <div class="nav-bottom-item">
+         <a href="/index" clas="nav-bottom-item left">
+           <div class="nav-bottom-icon">
+             <span class="glyphicon glyphicon-home"></span>
+           </div>
+           <div class="nav-bottom-text">
+             <p>Home</p>
+           </div>
+       </div>
+
+       <div class="nav-bottom-item">
+         <a href="/list" clas="nav-bottom-item middle">
+           <div class="nav-bottom-icon">
+             <span class="glyphicon glyphicon-pencil"></span>
+           </div>
+           <div class="nav-bottom-text">
+             <p>New Reflection</p>
+           </div>
+       </div>
+
+       <div class="nav-bottom-item middle active">
+         <a href="/add-question" clas="nav-bottom-item middle">
+           <div class="nav-bottom-icon">
+             <span class="glyphicon glyphicon-plus"></span>
+           </div>
+           <div class="nav-bottom-text">
+             <p>Add Question</p>
+           </div>
+         </a>
+       </div>
+
+       <div class="nav-bottom-item">
+         <a href="/stats" clas="nav-bottom-item right">
+           <div class="nav-bottom-icon">
+             <span class="	glyphicon glyphicon-stats"></span>
+           </div>
+           <div class="nav-bottom-text">
+             <p>Stats</p>
+           </div>
+         </a>
+       </div>
+     </div>
+   </div>
+ </nav>
+
+
+		<script src="/js/jquery-1.11.0.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/index.js"></script>
+		{{> ga}}
+</body>
+</html>

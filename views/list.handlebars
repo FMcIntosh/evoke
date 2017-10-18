@@ -1,0 +1,172 @@
+<html>
+<head>
+	<title>List</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+
+	 <link href="/css/bootstrap-theme.css" rel="stylesheet">
+	 <link href="/css/bootstrap.css" rel="stylesheet">
+	 <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+	 	 <link href="/css/hcilist.css" rel="stylesheet">
+
+</head>
+<body id = "bg1">
+	{{> navbar}}
+
+<div class="top-container">
+	  <h2 class="list-title">Today's Reflection</h2>
+
+	  <div class = "todaylist">
+		<h4 style="text-align: center;" class="mediumtext">{{task}}</h4>
+		<div><a href="/list" id="refresh-button">Skip Question<a><div>
+		<form id="addToday" role = "form" method="get" action="/subList">
+
+	    <div id="list-form">
+				<textarea id="name" name="name" cols="50" rows="3"></textarea>
+        </br>
+
+				<button id="edit-button">Edit</button>
+				<input type="hidden" name="taskTitle" value="{{task}}" />
+				<p class="emoji-option-header">Mood</p>
+				<label class="emoji">
+				  <i class="em em-smile"></i>
+					<input type="radio" name="mood" value="smile" />
+				</label class="emoji">
+
+				<label class="emoji">
+				  <i class="em em-grimacing"></i>
+					<input type="radio" name="mood" value="grimacing" />
+				</label class="emoji">
+
+				<label class="emoji">
+				  <i class="em em-smirk"></i>
+					<input type="radio" name="mood" value="smirk" />
+				</label class="emoji">
+
+				<label class="emoji">
+				  <i class="em em-stuck_out_tongue"></i>
+					<input type="radio" name="mood" value="stuck_out_tongue" />
+				</label class="emoji">
+
+				<label class="emoji">
+					<i class="em em-flushed"></i>
+					<input type="radio" name="mood" value="flushed" />
+				</label class="emoji">
+
+				<label class="emoji">
+				  <i class="em em-cold_sweat"></i>
+					<input type="radio" name="mood" value="cold_sweat" />
+				</label class="emoji">
+
+				<label class="emoji">
+				  <i class="em em-pensive"></i>
+					<input type="radio" name="mood" value="pensive" />
+				</label class="emoji">
+
+				<label class="emoji">
+				  <i class="em em-sob"></i>
+					<input type="radio" name="mood" value="sob" />
+				</label class="emoji">
+
+				<label class="emoji">
+				  <i class="em em-angry"></i>
+					<input type="radio" name="mood" value="angry" />
+				</label class="emoji">
+
+				<label class="emoji">
+				  <i class="em em-rage"></i>
+					<input type="radio" name="mood" value="rage" />
+				</label class="emoji">
+
+
+
+				<p class="emoji-option-header">Weather</p>
+				<label class="emoji">
+				  <i class="em em-sunny"></i>
+					<input type="radio" name="weather" value="sunny" />
+				</label class="emoji">
+
+
+				<label class="emoji">
+				  <i class="em em-partly_sunny"></i>
+					<input type="radio" name="weather" value="partly_sunny" />
+				</label class="emoji">
+				<!-- <button id="weather-button"><i class="em em-cloud"></i></button> -->
+				<label class="emoji">
+				  <i class="em em-cloud"></i>
+					<input type="radio" name="weather" value="cloud" />
+				</label class="emoji">
+				<!-- <button id="weather-button"><i class="em em-umbrella"></i></button> -->
+				<label class="emoji">
+				  <i class="em em-umbrella"></i>
+					<input type="radio" name="weather" value="umbrella" />
+				</label class="emoji">
+				<!-- <button id="weather-button"><i class="em em-snowflake"></i></button> -->
+				<label class="emoji">
+				  <i class="em em-snowflake"></i>
+					<input type="radio" name="weather" value="snowflake" />
+				</label class="emoji">
+				<a href="/index"><button class="submit" id="listSubmit">Submit</button></a>
+				<!--<a href="/index"> <button class="submit">Submit</button></a>-->
+
+			</div>
+	  <!-- <a href="/more-details"><button class="submit">Add more details about your day</button></a> -->
+	</form>
+	</div>
+
+	<!-- Nav bottom -->
+	<nav class="navbar navbar-default navbar-fixed-bottom" id="nav-bottom">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+
+	      <div class="nav-bottom-item">
+	        <a href="/index" clas="nav-bottom-item left">
+	          <div class="nav-bottom-icon">
+	            <span class="glyphicon glyphicon-home"></span>
+	          </div>
+	          <div class="nav-bottom-text">
+	            <p>Home</p>
+	          </div>
+	      </div>
+
+	      <div class="nav-bottom-item active">
+	        <a href="/list" clas="nav-bottom-item middle">
+	          <div class="nav-bottom-icon">
+	            <span class="glyphicon glyphicon-pencil"></span>
+	          </div>
+	          <div class="nav-bottom-text active">
+	            <p>New Reflection</p>
+	          </div>
+	      </div>
+
+	      <div class="nav-bottom-item middle">
+	        <a href="/add-question" clas="nav-bottom-item middle">
+	          <div class="nav-bottom-icon">
+	            <span class="glyphicon glyphicon-plus"></span>
+	          </div>
+	          <div class="nav-bottom-text">
+	            <p>Add Question</p>
+	          </div>
+	        </a>
+	      </div>
+
+	      <div class="nav-bottom-item">
+	        <a href="/stats" clas="nav-bottom-item right">
+	          <div class="nav-bottom-icon">
+	            <span class="	glyphicon glyphicon-stats"></span>
+	          </div>
+	          <div class="nav-bottom-text">
+	            <p>Stats</p>
+	          </div>
+	        </a>
+	      </div>
+	    </div>
+	  </div>
+	</nav>
+
+
+	<script src="/js/jquery-1.11.0.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/list.js"></script>
+	{{> ga}}
+</body>
+</html>

@@ -1,0 +1,87 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+	<title>Stats</title>
+	<link href="/css/bootstrap-theme.css" rel="stylesheet">
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/hcilist.css" rel="stylesheet">
+</head>
+<body id = "bg1">
+	{{> navbar}}
+<div class="stats-container">
+  <div>
+  	<h2 class="mehtext">Stats</h2>
+  </div>
+
+  <div id="load-div" style="display:none"></div>
+  <div class="chart-section mood-chart-section">
+    <h3 class="mediumtext">Favorite Mood Emojis<h3>
+    <canvas id="emoji-chart" width="350" height="350"></canvas>
+    <div class="emoji-section emoji-mood-section">
+    </div>
+  </div>
+
+  <div class="chart-section">
+    <h3 class="mediumtext">Favorite Weather Emojis<h3>
+    <canvas id="weather-chart" width="350" height="350"></canvas>
+    <div class="emoji-section emoji-weather-section">
+    </div>
+  </div>
+</div>
+<!-- Nav bottom -->
+<nav class="navbar navbar-default navbar-fixed-bottom" id="nav-bottom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+      <div class="nav-bottom-item">
+        <a href="/index" clas="nav-bottom-item left">
+          <div class="nav-bottom-icon">
+            <span class="glyphicon glyphicon-home"></span>
+          </div>
+          <div class="nav-bottom-text">
+            <p>Home</p>
+          </div>
+      </div>
+
+      <div class="nav-bottom-item">
+        <a href="/list" clas="nav-bottom-item middle">
+          <div class="nav-bottom-icon">
+            <span class="glyphicon glyphicon-pencil"></span>
+          </div>
+          <div class="nav-bottom-text active">
+            <p>New Reflection</p>
+          </div>
+      </div>
+
+      <div class="nav-bottom-item middle">
+        <a href="/add-question" clas="nav-bottom-item middle">
+          <div class="nav-bottom-icon">
+            <span class="glyphicon glyphicon-plus"></span>
+          </div>
+          <div class="nav-bottom-text">
+            <p>Add Question</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="nav-bottom-item active">
+        <a href="/stats" clas="nav-bottom-item right">
+          <div class="nav-bottom-icon">
+            <span class="	glyphicon glyphicon-stats"></span>
+          </div>
+          <div class="nav-bottom-text">
+            <p>Stats</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+	<script src="/js/jquery-1.11.0.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/index.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
+  <script src="/js/chart.js"></script>
+	{{> ga}}
+</body>
+</html>
